@@ -9,6 +9,97 @@
   <body>
     <main>
       <!-- Add your code here -->
+      <h1>Roth IRA Calculator</h1>
+      <form>
+        <div>
+          <label for="balance">Balance ($)</label><br />
+          <input type="text" id="balance" name="balance" size="30" required />
+        </div>
+        <br />
+        <div>
+          <label for="contribution">Annual Contribution:</label><br />
+          <input
+            type="text"
+            id="contribution"
+            name="contribution"
+            size="30"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          Maximize contributions?<br />
+          <input type="radio" id="maximize-yes" name="maximize" value="yes" />
+          <label for="maximize-yes">Yes</label>
+          <input type="radio" id="maximize-no" name="maximize" value="no" />
+          <label for="maximize-no">No</label>
+        </div>
+        <br />
+        <div>
+          <label for="rate-of-return">Expected rate of return (5)</label><br />
+          <input
+            type="number"
+            min="0"
+            max="100"
+            id="rate-of-return"
+            name="rate-of-return"
+            size="30"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="current-age">Current age</label><br />
+          <input
+            type="number"
+            min="0"
+            max="120"
+            id="current-age"
+            name="current-age"
+            size="30"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="retirement-age">Retirement age</label><br />
+          <input
+            type="number"
+            min="0"
+            max="120"
+            id="retirement-age"
+            name="retirement-age"
+            size="30"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="marginal-tax-rate">Marginal tax rate (%)</label><br />
+          <input
+            type="number"
+            min="0"
+            max="100"
+            id="marginal-tax-rate"
+            name="marginal-tax-rate"
+            size="30"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <button type="submit">Calculate</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+      <p>
+        This exercise is a simplified version of the Roth IRA Calculator at
+        <a
+          href="https://www.calculator.net/roth-ira-calculator.html"
+          target="_blank"
+          >Calculator.net</a
+        >
+      </p>
     </main>
   </body>
 </html>
