@@ -1,1 +1,280 @@
-/* Add your CSS code here  */
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+  --midnight-blue: #161678;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* ============================================================
+   Exercise 01 - Books
+   ============================================================ */
+
+.books-page {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #222;
+  background-color: #fafafa;
+}
+
+.site-header {
+  background-color: var(--dark-slate-infinity);
+}
+
+.navbar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navbar__link {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: var(--ice-blue-juvie);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__link:hover,
+.navbar__link:focus {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem 4rem;
+}
+
+.page__title {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 400;
+  color: var(--gothic-gray-blue);
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 2rem 0 3rem;
+  letter-spacing: 0.02em;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.book-list {
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+.book-list ol {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.covers {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.covers__img {
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 2px;
+}
+
+.covers__img:hover,
+.covers__img:focus {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(31, 42, 51, 0.35);
+}
+
+.pov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.pov-table th,
+.pov-table td {
+  border: 1px solid #b5b5b5;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pov-table thead th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.pov-table tfoot td {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+/* ============================================================
+   Exercise 02 - Roth IRA Form
+   ============================================================ */
+
+.form-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--midnight-blue);
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+.form-page__main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 3rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.card__title {
+  color: var(--midnight-blue);
+  font-size: 1.85rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.ira-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.ira-form__row {
+  display: contents;
+}
+
+.ira-form__label {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.ira-form__input {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font: inherit;
+  background-color: #fff;
+}
+
+.ira-form__input:focus {
+  outline: none;
+  border-color: var(--midnight-blue);
+  box-shadow: 0 0 0 2px rgba(22, 22, 120, 0.2);
+}
+
+.ira-form__fieldset {
+  grid-column: 1 / -1;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ira-form__legend {
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 0.35rem;
+}
+
+.ira-form__radios {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ira-form__radios label {
+  margin-right: 0.5rem;
+}
+
+.ira-form__buttons {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: filter 0.15s ease, background-color 0.15s ease;
+}
+
+.btn--primary {
+  background-color: var(--midnight-blue);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.15);
+}
+
+.btn--secondary {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+}
+
+.btn--secondary:hover {
+  background-color: #d8d8d8;
+}
+
+.ira-form__note {
+  grid-column: 1 / -1;
+  font-size: 0.85rem;
+  color: #333;
+  margin: 1rem 0 0;
+}
+
+.ira-form__note a {
+  color: var(--midnight-blue);
+}
