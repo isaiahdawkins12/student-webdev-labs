@@ -111,14 +111,35 @@ section.grid-container {
   gap: 10px;
 }
 
-.item1 { grid-column: span 3; }
-.item2 { grid-column: span 2; grid-row: 2; }
-.item3 { grid-column: 3;      grid-row: 2; }
-.item4 { grid-column: 2;      grid-row: 3; }
-.item5 { grid-column: 3;      grid-row: 3; }
-.item6 { display: none; }
-.item7 { grid-column: 1;      grid-row: 3; }
-.item8 { grid-column: span 3; }
+.item1 {
+  grid-column: span 3;
+}
+.item2 {
+  grid-column: span 2;
+  grid-row: 2;
+}
+.item3 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.item4 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.item5 {
+  grid-column: 3;
+  grid-row: 3;
+}
+.item6 {
+  display: none;
+}
+.item7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.item8 {
+  grid-column: span 3;
+}
 
 /* Exercise 04 - CSS Grid Areas */
 main.grid-container > h1 {
@@ -138,11 +159,21 @@ main.grid-container {
   grid-template-rows: auto 200px 200px 100px auto;
 }
 
-.header  { grid-area: header; }
-.article { grid-area: article; }
-.aside   { grid-area: aside; }
-.section { grid-area: section; }
-.footer  { grid-area: footer; }
+.header {
+  grid-area: header;
+}
+.article {
+  grid-area: article;
+}
+.aside {
+  grid-area: aside;
+}
+.section {
+  grid-area: section;
+}
+.footer {
+  grid-area: footer;
+}
 
 main.grid-container .grid-item {
   border-radius: 8px;
