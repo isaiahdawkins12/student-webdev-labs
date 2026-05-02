@@ -5,9 +5,18 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 /* Exercise 01 - Center */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e8e6f0;
+}
+
 .box {
   width: 200px;
   height: 100px;
@@ -39,7 +48,126 @@ h1 {
 }
 
 /* Exercise 02 - Flexbox */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: black;
+  color: white;
+}
+
+.top-bar h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+  color: #00cc00;
+}
+
+.main-area {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.page-area {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.page-area img {
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
+}
+
+.bottom-of-page {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: white;
+}
 
 /* Exercise 03 - CSS Grid */
+section.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 350px 150px auto;
+  gap: 10px;
+}
+
+.item1 { grid-column: span 3; }
+.item2 { grid-column: span 2; grid-row: 2; }
+.item3 { grid-column: 3;      grid-row: 2; }
+.item4 { grid-column: 2;      grid-row: 3; }
+.item5 { grid-column: 3;      grid-row: 3; }
+.item6 { display: none; }
+.item7 { grid-column: 1;      grid-row: 3; }
+.item8 { grid-column: span 3; }
 
 /* Exercise 04 - CSS Grid Areas */
+main.grid-container > h1 {
+  display: none;
+}
+
+main.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-areas:
+    "header"
+    "article"
+    "section"
+    "aside"
+    "footer";
+  grid-template-rows: auto 200px 200px 100px auto;
+}
+
+.header  { grid-area: header; }
+.article { grid-area: article; }
+.aside   { grid-area: aside; }
+.section { grid-area: section; }
+.footer  { grid-area: footer; }
+
+main.grid-container .grid-item {
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  main.grid-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 300px 150px auto;
+    grid-template-areas:
+      "header  header"
+      "article aside"
+      "section section"
+      "footer  footer";
+  }
+}
+
+@media (min-width: 1024px) {
+  main.grid-container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 300px 150px auto;
+    grid-template-areas:
+      "header  header"
+      "aside   article"
+      "section section"
+      "footer  footer";
+  }
+}
