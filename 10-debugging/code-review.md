@@ -6,7 +6,8 @@ Write your code review here in markdown format.
 
 Issue 1 is located in index.html at the very end of the file on lines 493-498. The form buttons are on the outside of the submission form and because of that they wont act on the form when pressed.
 
-Initial Code:
+
+#### Initial Code:
 
 ```html
         ></textarea>
@@ -21,7 +22,7 @@ Initial Code:
 
 ```
 
-Fixed Code:
+#### Fixed Code:
 
 ```html
    <textarea
@@ -42,6 +43,7 @@ Fixed Code:
     </div>
 ```
 
+
 ### Issue #2: Load new cat facts doesn't work
 
 The current issue with load new cat facts is that it simply doesn't load NEW facts after the initial set! Then, when you enable that to work, we have the issue that it just appends loading containers to a list of them and you just get more and more loading containers on the page. Finally, when you do get it to load properly, it appears that the initial API call doesn't actually get new facts, it just grabs the same facts each time and lists them on the page.
@@ -56,7 +58,8 @@ The way we solve this is in a couple of steps:
 
 3. Finally, we want to get actual new facts each time we call the endpoint at catfact.ninja and so we add a semi-random page to the end of the call using the Math library. This allows us to jump to different pages and grab a different 10 facts instead of displaying the same 10 each time.
 
-Initial Code:
+
+#### Initial Code:
 
 ```js
 const createLoadingContainer = function () {
@@ -94,7 +97,7 @@ const fetchCatFacts = async function () {
 };
 ```
 
-Final Code:
+#### Final Code:
 
 ```js
 const createLoadingContainer = function () {
